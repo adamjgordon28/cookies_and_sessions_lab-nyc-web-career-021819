@@ -1,0 +1,15 @@
+
+  <%if cart%>
+    <%cart.each do |product_name|%>
+      <li><%=product_name%></li>
+    <%end%>
+  <%end%>
+
+
+  <%= form_tag ({controller: 'products',
+      action: 'add',
+      method: 'post'}) do %>
+
+    <input name=product>
+    <input type=submit value='add to cart'>
+  <%end%>
